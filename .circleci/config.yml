@@ -2,12 +2,13 @@ version: 2.1
 jobs:
   deploy:
     docker:
-      - image: cimg/node
+      - image: cimg/node:18.3.0
     steps:
       - checkout
       - run:
           name: "Deploy to GH Pages"
           command: |
+            run: node --version 
             npm install
             npm install -g gh-pages --save-dev
             npm run deploy 
