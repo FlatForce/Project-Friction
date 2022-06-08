@@ -8,7 +8,7 @@ jobs:
       - run:
           name: "Deploy to GH Pages"
           command: |
-            run: node --version 
+            node --version 
             npm install
             npm install -g gh-pages --save-dev
             npm run deploy 
