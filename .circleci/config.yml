@@ -7,7 +7,9 @@ jobs:
       - checkout
       # look for existing cache and restore if found
       - restore_cache:
-          key: v1-deps-{{ checksum "package-lock.json" }}
+          key: 
+            - v1-deps-{{ checksum "package-lock.json" }}
+            - v1-deps-
       - run:
           name: "Deploy to GH Pages"
           command: |
