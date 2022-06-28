@@ -7,11 +7,11 @@ jobs:
       - checkout
       # look for existing cache and restore if found
       - restore_cache:
-        keys:
-          # when lock file changes, use increasingly general patterns to restore cache
-          - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
-          - node-v1-{{ .Branch }}-
-          - node-v1-
+          keys:
+            # when lock file changes, use increasingly general patterns to restore cache
+            - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+            - node-v1-{{ .Branch }}-
+            - node-v1-
       - run:
           name: "Deploy to GH Pages"
           command: |
