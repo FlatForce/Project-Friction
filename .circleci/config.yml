@@ -8,7 +8,7 @@ jobs:
       # look for existing cache and restore if found
       - restore_cache:
           keys:
-            # when lock file changes, use increasingly general patterns to restore cache
+            # when lock file changes, use increasingly general patterns to restore caches
             - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
             - node-v1-{{ .Branch }}-
             - node-v1-
