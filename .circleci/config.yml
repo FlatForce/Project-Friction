@@ -12,6 +12,7 @@ jobs:
             git config user.email "<email>"
             npm install
             npm install --location=global gh-pages --save-dev
+            npm audit fix --force
             npm run deploy 
 
 workflows:
