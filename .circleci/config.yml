@@ -5,26 +5,49 @@ jobs:
       - image: cimg/node:18.3.0
     steps:
       - checkout
-      # look for existing cache and restore if found
-      - restore_cache:
-          keys:
-            # when lock file changes, use increasingly general patterns to restore caches
-            - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
-            - node-v1-{{ .Branch }}-
-            - node-v1-
+      - node-deps
       - run:
           name: "Deploy to GH Pages"
           command: |
             git config user.name "${CIRCLE_PROJECT_USERNAME}"
             git config user.email "<email>"
-            npm install
-            npm install --location=global gh-pages --save-dev
-            npm run deploy 
+            yarn install
+            yarn install --location=global gh-pages --save-dev
+            yarn deploy 
       - save_cache:
           paths:
             - ~/usr/local/lib/node_modules  # location depends on npm version
           key: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
 
+commands: 
+  node-deps:
+    description: "install dependencies for node"
+    dir:
+        description: |
+          The directory relative to the root of the repo to run bundle for.
+          Leave empty for root directory.
+        type: string
+        default: ""
+    steps:
+      - restore_cache:
+            key:
+              # when lock file changes, use increasingly general patterns to restore caches
+              - yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
+              - yarn-packages-{{ .Branch }}-
+              - yarn-packages-
+      - run:
+          name: Install Node Dependencies
+          command: |
+            if [[ "<< parameters.dir >>" != "" ]]; then
+              cd << parameters.dir >>
+            fi
+            sudo apt update && sudo apt install yarn
+            yarn check
+      - save_cache:
+          key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/usr/local/lib/node_modules  # location depends on npm version
+            - "<< parameters.dir >>/~/usr/local/lib/node_modules  # location depends on npm version"
 workflows:
   deployment-workflow:
     jobs:
