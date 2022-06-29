@@ -13,11 +13,7 @@ jobs:
             git config user.email "<email>"
             yarn install
             yarn add gh-pages --dev
-            yarn deploy 
-      - save_cache:
-          paths:
-            - ~/usr/local/lib/node_modules  # location depends on npm version
-          key: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+            yarn deploy
 
 commands: 
   node-deps:
