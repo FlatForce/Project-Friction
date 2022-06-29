@@ -22,12 +22,13 @@ jobs:
 commands: 
   node-deps:
     description: "install dependencies for node"
-    dir:
-        description: |
-          The directory relative to the root of the repo to run bundle for.
-          Leave empty for root directory.
-        type: string
-        default: ""
+    parameters:
+      dir:
+          description: |
+            The directory relative to the root of the repo to run bundle for.
+            Leave empty for root directory.
+          type: string
+          default: ""
     steps:
       - restore_cache:
             keys:
