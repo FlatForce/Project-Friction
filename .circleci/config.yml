@@ -30,7 +30,7 @@ commands:
         default: ""
     steps:
       - restore_cache:
-            key:
+            keys:
               # when lock file changes, use increasingly general patterns to restore caches
               - yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
               - yarn-packages-{{ .Branch }}-
