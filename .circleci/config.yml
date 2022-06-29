@@ -12,7 +12,7 @@ jobs:
             git config user.name "${CIRCLE_PROJECT_USERNAME}"
             git config user.email "<email>"
             yarn install
-            yarn install --location=global gh-pages --save-dev
+            yarn add gh-pages --dev
             yarn deploy 
       - save_cache:
           paths:
