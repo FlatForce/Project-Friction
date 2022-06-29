@@ -15,7 +15,14 @@ jobs:
             yarn add gh-pages --dev
             yarn deploy
 
-commands: 
+commands:
+  configure-user:
+    description: "install dependencies for node"
+    steps:
+      - run: |
+          git config user.name "${CIRCLE_PROJECT_USERNAME}"
+          git config user.email "<email>"
+
   node-deps:
     description: "install dependencies for node"
     parameters:
