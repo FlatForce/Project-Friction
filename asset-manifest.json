@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Project-Friction/static/css/main.073c9b0a.css",
-    "main.js": "/Project-Friction/static/js/main.5c023be8.js",
+    "main.css": "/Project-Friction/static/css/main.4130101e.css",
+    "main.js": "/Project-Friction/static/js/main.51a4d6a3.js",
     "static/js/787.6569e2a9.chunk.js": "/Project-Friction/static/js/787.6569e2a9.chunk.js",
-    "static/media/logo.svg": "/Project-Friction/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/logo.svg": "/Project-Friction/static/media/logo.a831a11c590c37ac5b9932796f7dca03.svg",
     "index.html": "/Project-Friction/index.html",
-    "main.073c9b0a.css.map": "/Project-Friction/static/css/main.073c9b0a.css.map",
-    "main.5c023be8.js.map": "/Project-Friction/static/js/main.5c023be8.js.map",
+    "main.4130101e.css.map": "/Project-Friction/static/css/main.4130101e.css.map",
+    "main.51a4d6a3.js.map": "/Project-Friction/static/js/main.51a4d6a3.js.map",
     "787.6569e2a9.chunk.js.map": "/Project-Friction/static/js/787.6569e2a9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.5c023be8.js"
+    "static/css/main.4130101e.css",
+    "static/js/main.51a4d6a3.js"
   ]
 }
