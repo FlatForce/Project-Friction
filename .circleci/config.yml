@@ -43,7 +43,6 @@ commands:
               cd << parameters.dir >>
             fi
             sudo apt update && sudo apt install yarn
-            yarn check
       - save_cache:
           key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
