@@ -71,7 +71,11 @@ workflows:
     jobs:
       - dependencies
       - build
+          requires:
+            - dependencies
       - deploy:
+          requires:
+            - build
           filters:
             branches:
               only:
