@@ -1,15 +1,25 @@
 version: 2.1
 jobs:
-  deploy:
+  dependencies:
     docker:
       - image: cimg/node:18.3.0
     steps:
       - checkout
       - node-deps
+  build:
+    docker:
+      - image: cimg/node:18.3.0
+    steps:
+      - checkout
       - run:
           name: "Build"
           command: |
             yarn build
+  deploy:
+    docker:
+      - image: cimg/node:18.3.0
+    steps:
+      - checkout
       - run:
           name: "Deploy to GH Pages"
           command: |
@@ -59,6 +69,10 @@ commands:
 workflows:
   deployment-workflow:
     jobs:
+      - dependencies
+      - build:
+          requires:
+            - dependencies
       - deploy:
           filters:
             branches:
