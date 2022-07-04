@@ -1,6 +1,10 @@
 version: 2.1
 jobs:
   deploy:
+    filters:
+      branches:
+        only:
+          - main
     docker:
       - image: cimg/node:18.3.0
     steps:
