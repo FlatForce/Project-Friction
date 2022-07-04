@@ -8,7 +8,7 @@ class Home extends React.Component {
         <div>
           <p>This page is the friction filled front-facing landing site</p>
           <p>
-            Nothing here is of any use as of yet and is all bear bones so please bear with us
+            Nothing here is of any use as of yet and is all bare-bones so please bear with us
           </p>
           <p>Once you are done looking at this silly page feel free to close it out</p>
           <p>
