@@ -1,10 +1,5 @@
 version: 2.1
 jobs:
-  deploy:
-    filters:
-      branches:
-        only:
-          - main
     docker:
       - image: cimg/node:18.3.0
     steps:
@@ -55,7 +50,12 @@ commands:
           paths:
             - ~/usr/local/lib/node_modules  # location depends on npm version
             - "<< parameters.dir >>/~/usr/local/lib/node_modules  # location depends on npm version"
+            
 workflows:
   deployment-workflow:
     jobs:
-      - deploy
+      - deploy:
+          filters:
+            branches:
+              only:
+                - main
