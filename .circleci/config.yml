@@ -14,6 +14,7 @@ jobs:
       - run:
           name: "Build"
           command: |
+            yarn install
             yarn build
   deploy:
     docker:
@@ -59,7 +60,6 @@ commands:
               cd << parameters.dir >>
             fi
             sudo apt update && sudo apt install yarn
-            yarn install
       - save_cache:
           key: yarn-packages-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
