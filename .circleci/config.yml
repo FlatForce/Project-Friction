@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  - deploy:
+  deploy:
     docker:
       - image: cimg/node:18.3.0
     steps:
