@@ -10,7 +10,7 @@ class Home extends React.Component {
           <p>
             Nothing here is of any use as of yet and is all bare-bones so please bear with us
           </p>
-          <p>Once you are done looking at this silly page feel free to close it out</p>
+          <p>Once you are done looking at this silly page feel free to close it out!</p>
           <p>
             (ctrl/cmd + w if you're not familiar)
           </p>
