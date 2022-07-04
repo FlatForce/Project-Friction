@@ -70,7 +70,7 @@ workflows:
   deployment-workflow:
     jobs:
       - dependencies
-      - build
+      - build:
           requires:
             - dependencies
       - deploy:
