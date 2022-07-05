@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Project-Friction/static/css/main.4130101e.css",
-    "main.js": "/Project-Friction/static/js/main.58d93f88.js",
+    "main.css": "/Project-Friction/static/css/main.52640e28.css",
+    "main.js": "/Project-Friction/static/js/main.3eab45ef.js",
     "static/js/787.6569e2a9.chunk.js": "/Project-Friction/static/js/787.6569e2a9.chunk.js",
     "static/media/logo.svg": "/Project-Friction/static/media/logo.a831a11c590c37ac5b9932796f7dca03.svg",
     "index.html": "/Project-Friction/index.html",
-    "main.4130101e.css.map": "/Project-Friction/static/css/main.4130101e.css.map",
-    "main.58d93f88.js.map": "/Project-Friction/static/js/main.58d93f88.js.map",
+    "main.52640e28.css.map": "/Project-Friction/static/css/main.52640e28.css.map",
+    "main.3eab45ef.js.map": "/Project-Friction/static/js/main.3eab45ef.js.map",
     "787.6569e2a9.chunk.js.map": "/Project-Friction/static/js/787.6569e2a9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4130101e.css",
-    "static/js/main.58d93f88.js"
+    "static/css/main.52640e28.css",
+    "static/js/main.3eab45ef.js"
   ]
 }
