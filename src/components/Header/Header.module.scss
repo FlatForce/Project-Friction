@@ -1,6 +1,6 @@
 .header {
     align-items: center;
-    background-color: dodgerblue;
+    background-color: rgb(30, 161, 255);
     display: flex;
     flex-direction: row;
     height: 4rem;
@@ -10,6 +10,7 @@
     font-size: 1.2rem;
     font-weight: bold;
     width: 100%;
+    color: white
 }
   
 .logo {
