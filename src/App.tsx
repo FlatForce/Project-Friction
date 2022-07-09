@@ -41,7 +41,6 @@ function App() {
     return (
       
       <div className={styles.App}>
-        <h1>React Responsive - guide</h1>
       {isMobileDevice && <Mobile />}
       {isTabletDevice && <TabletMobile/>}
       {isDesktop && <Desktop/>}
